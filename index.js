@@ -1,10 +1,25 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  const wordArray = word.split("");
+  const revWordArray = [];
+  for (let i = 0; i < wordArray.length; i++) {
+    revWordArray.unshift(wordArray[i]);
+  }
+  let revWord = revWordArray.join("");
+  console.log(word);
+  console.log(revWord);
+  if (word === revWord) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-/* 
-  Add your pseudocode here
-*/
+
+// 1. convert string (word) to an array and assing it to a variable
+// 2. create a new empty array
+// 3. for each letter in the array, add it to the new array in reverse order
+// 4. convert the new reversed array to a string
+// 5. compare the two strings. If they're the same, return true. If not, return false
 
 /*
   Add written explanation of your solution here
